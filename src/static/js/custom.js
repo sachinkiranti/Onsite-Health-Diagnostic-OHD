@@ -28,4 +28,9 @@
     }
   });
 
+  // Add dropify
+  if(typeof $.fn.dropify !== 'undefined') {
+        $('.dropify-file-input').dropify()
+  }
+
 })(jQuery);
