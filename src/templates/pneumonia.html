@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/css/font-awesome.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/css/bootstrap.min.css')}}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css">
   <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
 
 </head>
@@ -65,21 +65,12 @@
                   </div>
 
                   <!-- Text input-->
-                  
                   <div class="form-group">
-                    <img id="blah" alt="image" width="150" height="150"/>
-
-                      <input type="file" name = "file" id = "imageUpload" accept = ".png, .jpg, .jpeg" class='btn-img' onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-
-                        <div class="form-group">
-                          <label class="col-md-4 control-label"></label>
-                          <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning">Predict <span
-                                class="glyphicon glyphicon-send"></span></button>
-                          </div>
-                        </div>  
-                        <h3 style="color: black;">{{prediction}}</h3>
+                      <input type="file" name = "file" id = "imageUpload" accept = ".png, .jpg, .jpeg" class='btn-img dropify-file-input'>
+                      <h3 style="color: black;">{{prediction}}</h3>
                   </div>
+
+                  <button type="submit" class="btn btn-warning">Predict <span class="glyphicon glyphicon-send"></span></button>
                  
                 </fieldset>
               </form>
@@ -166,6 +157,7 @@
 
   <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
   <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="{{url_for('static',filename='js/custom.js')}}"></script>
 </body>
 
